@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:cinema.properties"/>
+
+    <bean id="intelligenceLevel"
+          class="ru.sfu.Level">
+        <property name="ClassLevel" value="${intelligenceLevel.ClassLevel}"/>
+    </bean>
+
+    <bean id="intelligencePlace"
+          class="ru.sfu.Place">
+        <property name="spots" value="${intelligencePlace.spots}"/>
+    </bean>
+
+    <bean id="intelligenceTicket"
+          class="ru.sfu.Ticket">
+        <property name="name" value="${intelligenceTicket.name}"/>
+        <property name="surname" value="${intelligenceTicket.surname}"/>
+    </bean>
+
+    <bean id="cinema"
+          class="ru.sfu.Cinema">
+        <constructor-arg>
+            <list value-type="ru.sfu.intelligence">
+                <ref bean="intelligencePlace"/>
+                <ref bean="intelligenceLevel"/>
+            </list>
+        </constructor-arg>
+        <property name="intelligence" ref="intelligenceTicket"/>
+    </bean>
+    
+</beans>
