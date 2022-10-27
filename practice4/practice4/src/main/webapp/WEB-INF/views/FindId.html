@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Поиск по ID</title>
+</head>
+<body>
+<h1>Найти кинотеатр</h1>
+<h3>Введите id кинотеарта, чтобы найти его в базе</h3>
+<form th:action="@{/сinemas/find/сinema}" th:method="GET" th:object="${сinema}">
+  <label for="id">Id</label>
+  <input type="number" id="id" th:field="*{price}"
+         th:class="${#fields.hasErrors('id')}? fieldError">
+  <div th:text="${message}">Error</div>
+
+  <input type="submit" value="Найти">
+</form>
+</body>
+</html>

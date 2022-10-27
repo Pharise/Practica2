@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>CinemaDatabase</title>
+  <style>
+    .database_table th, tr{
+      border-bottom: 1px black ridge;
+    }
+
+    .database_table td{
+      border: 1px black ridge;
+      user-select: none;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<h1>Кинотеатр</h1>
+
+<table class="database_table">
+  <tr>
+    <th>Id</th>
+    <th>model</th>
+    <th>material</th>
+    <th>typeOfCinema</th>
+    <th>price</th>
+    <th>volume</th>
+  </tr>
+
+  <tr th:each="cinema: ${cinema}">
+    <td th:text="${cinema.getId()}">Id</td>
+    <td th:text="${cinema.getModel()}">model</td>
+    <td th:text="${cinema.getMaterial()}">material</td>
+    <td th:text="${cinema.getTypeOfCinema()}">typeOfCinema</td>
+    <td th:text="${cinema.getPrice()}">Price</td>
+    <td th:text="${cinema.getVolume()}">Volume</td>
+  </tr>
+</table>
+<form th:action="@{/}">
+  <input type="submit" value="Вернуться в главное меню" >
+</form>
+</body>
+</html>

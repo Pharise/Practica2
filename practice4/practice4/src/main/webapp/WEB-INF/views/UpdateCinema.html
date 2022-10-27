@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>AddСinema</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/styledb.css">
+</head>
+<body>
+<h1>Изменить кинотеатр</h1>
+<h3>Введите данные о кинотеатре</h3>
+
+<form th:object="${сinema}" th:action="@{/сinemas/update}" th:method="PUT">
+  <table th:class="database_table">
+    <tr>
+      <td><label for="id">Id</label></td>
+      <td>
+        <input type="number" id="id" th:field="*{id}"
+               th:class="${#fields.hasErrors('id')}? fieldError" />
+        <div th:text="${message}">Error</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="model">Модель</label>
+      </td>
+      <td>
+        <input type="text" id="model" th:field="${сinema.model}" />
+        <div th:errors="*{model}" class="error" style="color: red">Error</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="material">Материал, из которого изготовлен кинотеатр</label>
+      </td>
+      <td>
+        <input type="text" id="material" th:field="${сinema.material}"/>
+        <div th:errors="*{material}" class="error" style="color: red">Error</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="typeOfСinema">Тип кинотеатра</label>
+      </td>
+      <td>
+        <input type="text" id="typeOfСinema" th:field="${сinema.typeOfСinema}"/>
+        <div th:errors="*{typeOfСinema}" class="error" style="color: red">Error</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <label for="price">Цена</label>
+      </td>
+      <td>
+        <input type="number" id="price" th:field="${сinema.price}"/>
+        <div th:errors="*{price}" class="error" style="color: red">Error</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="volume">Пространство кинотеатра</label>
+      </td>
+      <td>
+        <input type="number" id="volume" th:field="${сinema.volume}"/>
+        <div th:errors="*{volume}" class="error" style="color: red">Error</div>
+      </td>
+    </tr>
+
+    <tr>
+      <td><input type="submit" value="ок"></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
