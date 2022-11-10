@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Кинотеатр</title>
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/styledb.css">
+</head>
+<body>
+<table th:class="database_table">
+  <tr>
+    <td><h4>Id</h4></td>
+    <td><h4 th:text="${сinema.getId()}">Id</h4></td>
+  </tr>
+
+  <tr>
+    <td>Модель</td>
+    <td><h4 th:text="${сinema.getModel()}">Model</h4></td>
+  </tr>
+
+  <tr>
+    <td>Материал</td>
+    <td><h4 th:text="${сinema.getMaterial()}">Material</h4></td>
+  </tr>
+
+  <tr>
+    <td>Тип кинотеатра</td>
+    <td><h4 th:text="${сinema.getTypeOfСinema()}">getTypeOfСinema</h4></td>
+  </tr>
+
+  <tr>
+    <td>Цена</td>
+    <td><h4 th:text="${сinema.getPrice()}">Price</h4></td>
+  </tr>
+
+  <tr>
+    <td>Объем</td>
+    <td><h4 th:text="${сinema.getVolume()}">Volume</h4></td>
+  </tr>
+
+  <tr>
+    <td><a th:href="@{/}">Вернуться в главное меню</a></td>
+  </tr>
+</table>
+</body>
+</html>
