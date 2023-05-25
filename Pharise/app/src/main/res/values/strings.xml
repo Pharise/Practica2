@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Pharise</string>
+    <string name="button_text">Войти</string>
+    <string name="button_text9">Выйти</string>
+    <string name="button_text1">Зарегистрироваться</string>
+    <string name="button_text2">-</string>
+    <string name="button_text3">-</string>
+    <string name="button_text4">-</string>
+    <string name="button_text5">-</string>
+    <string name="button_text6">Навигационная панель</string>
+    <string name="button_text7">История покупок</string>
+    <string name="button_text8">Мой аккаунт</string>
+    <string name="text_view1">Авторизация</string>
+    <string name="text_view2">Если у вас нет зарегистрированных аккаунтов</string>
+    <string name="text_view3">Вы можете</string>
+    <string name="hint_1">Введите свой email</string>
+    <string name="hint_2">Введите свой пароль</string>
+    <string name="hint_3">Подтвердите свой пароль</string>
+    <string name="hint_4">sokrat@mail.ru</string>
+    <string name="hint_5">****************</string>
+    <string name="text_view4">Email</string>
+    <string name="text_view5">Пароль</string>
+    <string name="text_view6">зарегистрироваться сейчас!</string>
+    <string name="text_view7">Регистрация</string>
+    <string name="text_view8">Если у вас есть зарегистрированный аккаунт</string>
+    <string name="text_view9">войти сейчас!</string>
+    <string name="text_view10">Подтверждение пароля</string>
+    <string name="text_view11">Навигационная панель</string>
+    <string name="text_view12">$ 76,98</string>
+    <string name="text_view13">€ 83,49</string>
+    <string name="text_view14">+0,08</string>
+    <string name="text_view15">+0,29</string>
+    <string name="text_view16">История</string>
+    <string name="text_view17">Great snacks</string>
+    <string name="text_view18">soda</string>
+    <string name="text_view19">chips</string>
+    <string name="text_view20">crackers</string>
+    <string name="text_view21">popcorn</string>
+    <string name="text_view22">Мой аккаунт</string>
+
+
+
+</resources>
