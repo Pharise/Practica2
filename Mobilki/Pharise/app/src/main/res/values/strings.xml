@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Pharise</string>
     <string name="button_text">Войти</string>
+    <string name="button_text10">Чтение данных</string>
     <string name="button_text9">Выйти</string>
     <string name="button_text1">Зарегистрироваться</string>
     <string name="button_text2">-</string>

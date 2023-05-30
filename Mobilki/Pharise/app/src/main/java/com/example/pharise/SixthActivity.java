@@ -14,7 +14,7 @@ public class SixthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sixth);
     }
     public void goBeack(View v) {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,Main2Activity.class);
         startActivity(intent);
     }
     public void goMBack(View v) {

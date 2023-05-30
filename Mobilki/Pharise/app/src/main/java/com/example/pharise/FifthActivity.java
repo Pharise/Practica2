@@ -14,7 +14,7 @@ public class FifthActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fifth);
     }
     public void goBack(View v) {
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(this,Main2Activity.class);
         startActivity(intent);
 
     }
